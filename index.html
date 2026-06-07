@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Floating Panda Dream</title>
+<style>
+:root{--bg:#0f1018;--panel:#171829;--ink:#fff8f0;--muted:#c4c3d7;--line:#333451;--a:#ffd166;--b:#94d2ff;--c:#ff8aa8}*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Georgia,serif;background:radial-gradient(circle at 20% 16%,rgba(255,209,102,.25),transparent 25%),radial-gradient(circle at 82% 20%,rgba(148,210,255,.2),transparent 30%),linear-gradient(145deg,#0f1018,#171936 58%,#1b1420);color:var(--ink)}main{width:min(1120px,calc(100vw - 32px));margin:auto;padding:48px 0}.kicker{color:var(--a);font:800 12px Verdana,sans-serif;text-transform:uppercase;letter-spacing:.12em}h1{font-size:clamp(42px,8vw,92px);line-height:.92;margin:0;letter-spacing:0}.lede{font-size:21px;line-height:1.55;color:#f1ecff;max-width:800px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.btn{border:1px solid var(--line);border-radius:8px;padding:12px 16px;color:var(--ink);background:#20223d;text-decoration:none;font:800 15px Verdana,sans-serif}.btn.primary{background:var(--a);color:#201504}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card,.panel{border:1px solid var(--line);border-radius:8px;background:rgba(23,24,41,.86);padding:20px}.card h2,.panel h2{margin:0 0 10px;font:800 18px Verdana,sans-serif}.card p,.panel p{color:var(--muted);line-height:1.55}.sky{height:120px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,#1c2751,#37244a);position:relative;overflow:hidden}.moon{position:absolute;width:42px;height:42px;border-radius:50%;background:#ffe49b;right:12%;top:18px}.panda{position:absolute;left:18%;top:54px;font:42px serif}pre{white-space:pre-wrap;background:#0b0c15;border:1px solid var(--line);border-radius:8px;padding:16px;color:#fff1b8;overflow:auto}@media(max-width:760px){main{padding:28px 0}.grid{grid-template-columns:1fr}.lede{font-size:17px}}
+</style>
+</head>
+<body>
+<main>
+<p class="kicker">DaCameraGirl / floating-panda-dream</p>
+<h1>Floating Panda Dream</h1>
+<p class="lede">A small Panda3D arcade MVP where you pilot a floating panda through a dreamy sky lane, collect moon candy, chain lantern rings, and dodge ghost clouds before the timer runs out.</p>
+<div class="actions"><a class="btn primary" href="https://github.com/DaCameraGirl/floating-panda-dream">Open source</a><a class="btn" href="https://github.com/DaCameraGirl/floating-panda-dream/tree/main/src">View game code</a></div>
+<section class="sky"><div class="moon"></div><div class="panda">P</div></section>
+<section class="grid"><article class="card"><h2>Collect</h2><p>Moon candy gives points and lantern rings boost your streak for bigger scores.</p></article><article class="card"><h2>Dodge</h2><p>Ghost clouds drain energy and break streaks, so clean movement matters.</p></article><article class="card"><h2>Controls</h2><p>Use WASD or arrows to float, Space to dash, R to restart, and Esc to quit.</p></article></section>
+<section class="panel"><h2>Run Locally</h2><pre>pip install -r requirements.txt
+python src/main.py</pre></section>
+</main>
+</body>
+</html>
