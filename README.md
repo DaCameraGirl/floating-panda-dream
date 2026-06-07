@@ -8,13 +8,16 @@ A dreamy little arcade game where you guide a floating panda through a neon sky 
 
 ### 🌐 GitHub Pages Browser Game
 
-The live Pages version is a self-contained browser game in `index.html`:
+The live Pages version is a static browser game powered by `index.html`, `styles.css`, and `game.js`:
 
 - 🐼 Floating panda character
 - 🖱️ Mouse steering: hold/click the playfield and guide the panda
 - 📱 Touch steering and on-screen mobile controls
 - ⌨️ Keyboard controls
 - ⚡ Dash move
+- ✨ Sparkly dart shooter
+- 🔊 Browser-made panda sound effects
+- 🌠 Neon panda trails and dart trails
 - 🍬 Moon candy
 - ⭐ Star fruit
 - 🫧 Dream bubbles
@@ -34,11 +37,12 @@ The repo also keeps the original local Panda3D version in `src/`. That version r
 
 ### Browser / GitHub Pages
 
-- 🖱️ **Mouse:** hold/click the game area to steer toward the pointer
+- 🖱️ **Mouse:** hold/click the game area to steer toward the pointer and auto-fire sparkly darts
 - 🖱️ **Double-click:** dash
 - 📱 **Touch:** hold the screen to steer, or use the on-screen buttons
 - ⌨️ **WASD / Arrow keys:** move
 - ⚡ **Space:** dash
+- ✨ **F / Enter:** shoot sparkly darts
 
 ### Python / Panda3D
 
@@ -52,12 +56,12 @@ The repo also keeps the original local Panda3D version in `src/`. That version r
 | Language | Where | What It Does |
 | --- | --- | --- |
 | 🌐 **HTML** | `index.html` | Browser game structure for GitHub Pages |
-| 🎨 **CSS** | embedded in `index.html` | Neon styling, HUD, overlays, touch controls |
-| 🟨 **JavaScript** | embedded in `index.html` | Canvas game loop, physics, collisions, input, scoring |
+| 🎨 **CSS** | `styles.css` | Neon styling, HUD, overlays, touch controls |
+| 🟨 **JavaScript** | `game.js` | Canvas game loop, physics, collisions, input, scoring, sounds |
 | 🐍 **Python** | `src/` | Original Panda3D desktop game MVP |
 | 📦 **Requirements text** | `requirements.txt` | Python dependency list for the Panda3D version |
 
-GitHub's language meter may show mostly **HTML** and **Python** because the CSS and JavaScript are bundled inside the static `index.html` file.
+The browser game is split into HTML, CSS, and JavaScript files so GitHub can detect each language more clearly.
 
 ## 🚀 Run Locally
 
@@ -97,7 +101,9 @@ Score as high as possible before time runs out:
 
 ```text
 .
-├── index.html          # GitHub Pages browser game
+├── index.html          # GitHub Pages browser shell
+├── styles.css          # Neon game styling
+├── game.js             # Browser game logic, sounds, and controls
 ├── src/                # Panda3D Python game
 ├── requirements.txt    # Python dependencies
 ├── README.md
