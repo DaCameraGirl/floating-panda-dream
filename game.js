@@ -53,7 +53,10 @@ const player = {
   slow: 0,
   fire: 0,
   magnet: 0,
-  pulse: 0
+  pulse: 0,
+  aimX: 1,
+  aimY: 0,
+  muzzle: 0
 };
 
 const TYPES = {
@@ -185,6 +188,9 @@ function reset() {
   player.fire = 0;
   player.magnet = 0;
   player.pulse = 0;
+  player.aimX = 1;
+  player.aimY = 0;
+  player.muzzle = 0;
   mouse.active = false;
   running = true;
   overlay.classList.add('hidden');
@@ -332,6 +338,15 @@ function playPower() {
   setTimeout(() => tone(1080, 0.11, 'sine', 0.035, 1.15), 50);
 }
 
+function muzzlePoint(dx = player.aimX || 1, dy = player.aimY || 0) {
+  return {
+    x: player.x + dx * 46 - dy * 8,
+    y: player.y + dy * 31 + dx * 8,
+    baseX: player.x + dx * 25 - dy * 7,
+    baseY: player.y + dy * 17 + dx * 7
+  };
+}
+
 function shoot() {
   if (!running || player.fire > 0) return;
   initAudio();
@@ -341,21 +356,28 @@ function shoot() {
   const dx = (tx - player.x) / d;
   const dy = (ty - player.y) / d;
   const color = pick(['#fff36b', '#64e9ff', '#ff7ac8', '#58ffc5', '#ffffff']);
+  const muzzle = muzzlePoint(dx, dy);
+  player.aimX = dx;
+  player.aimY = dy;
   darts.push({
-    x: player.x + dx * 34,
-    y: player.y + dy * 24,
+    x: muzzle.x,
+    y: muzzle.y,
     vx: dx * 720 + player.vx * 0.12,
     vy: dy * 720 + player.vy * 0.12,
     life: 1.08,
     r: 7,
     color,
     t: 0,
-    tail: []
+    tail: [
+      { x: muzzle.baseX, y: muzzle.baseY },
+      { x: muzzle.x - dx * 12, y: muzzle.y - dy * 12 }
+    ]
   });
   player.fire = 0.16;
+  player.muzzle = 0.12;
   player.energy = clamp(player.energy - 0.35, 0, 100);
   playShoot();
-  trail(player.x + dx * 30, player.y + dy * 20, color, 8);
+  trail(muzzle.x, muzzle.y, color, 10);
 }
 
 function hit(a, b, rr) {
@@ -477,6 +499,7 @@ function update(dt) {
   player.slow = Math.max(0, player.slow - dt);
   player.magnet = Math.max(0, player.magnet - dt);
   player.pulse = Math.max(0, player.pulse - dt);
+  player.muzzle = Math.max(0, player.muzzle - dt);
   player.energy = clamp(player.energy + dt * 3.4, 0, 100);
   trail(player.x - 30, player.y + rand(-10, 10), player.dash > 0 ? '#64e9ff' : '#ff7ac8', player.dash > 0 ? 4 : 1);
 
@@ -1119,6 +1142,42 @@ function drawPanda() {
   ctx.restore();
 }
 
+function drawBlaster() {
+  const aimX = player.aimX || 1;
+  const aimY = player.aimY || 0;
+  const muzzle = muzzlePoint(aimX, aimY);
+  const angle = Math.atan2(aimY, aimX);
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  ctx.strokeStyle = '#202026';
+  ctx.lineWidth = 9;
+  ctx.lineCap = 'round';
+  ctx.beginPath();
+  ctx.moveTo(muzzle.baseX, muzzle.baseY);
+  ctx.lineTo(muzzle.x - aimX * 6, muzzle.y - aimY * 6);
+  ctx.stroke();
+  ctx.strokeStyle = '#fff36b';
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(muzzle.baseX + aimX * 5, muzzle.baseY + aimY * 5);
+  ctx.lineTo(muzzle.x, muzzle.y);
+  ctx.stroke();
+  ctx.fillStyle = '#64e9ff';
+  ctx.beginPath();
+  ctx.arc(muzzle.x, muzzle.y, 5, 0, Math.PI * 2);
+  ctx.fill();
+  if (player.muzzle > 0) {
+    const glow = player.muzzle / 0.12;
+    ctx.fillStyle = 'rgba(255,243,107,' + glow + ')';
+    ctx.shadowColor = '#fff36b';
+    ctx.shadowBlur = 22;
+    ctx.beginPath();
+    ctx.arc(muzzle.x + Math.cos(angle) * 8, muzzle.y + Math.sin(angle) * 8, 7 + glow * 8, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
 function drawDarts() {
   ctx.save();
   ctx.globalCompositeOperation = 'lighter';
@@ -1204,6 +1263,7 @@ function render() {
   drawBursts();
   drawMouseTarget();
   drawPanda();
+  drawBlaster();
   if (flash > 0) {
     ctx.fillStyle = 'rgba(255,110,90,' + flash * 0.32 + ')';
     ctx.fillRect(0, 0, W, H);

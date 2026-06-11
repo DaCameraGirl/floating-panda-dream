@@ -1,5 +1,5 @@
 /* Service worker for offline play. */
-const CACHE = 'pwa-floating-panda-dream-v2';
+const CACHE = 'pwa-floating-panda-dream-v3';
 const ASSETS = [
   './',
   './index.html',

@@ -7,6 +7,8 @@ This file tracks player-facing changes to the browser game so the README can sta
 ### Browser Game Upgrade
 
 - Expanded the browser version beyond the original MVP into a denser arcade sky-run.
+- Added a floating panda with a helium balloon illustration to the README.
+- Tightened sparkly dart firing so shots originate from a visible muzzle with a synced trail and flash.
 - Added local best score tracking and a dream rank HUD.
 - Added new goodies: moon pearls, prism gems, lotus blooms, dream kites, and comet crumbs.
 - Added new powerups: star magnets that pull collectibles closer and lullaby bells that clear nearby hazards.
