@@ -1,8 +1,10 @@
 /* Service worker for offline play. */
-const CACHE = 'pwa-floating-panda-dream-v1';
+const CACHE = 'pwa-floating-panda-dream-v2';
 const ASSETS = [
   './',
   './index.html',
+  './styles.css',
+  './game.js',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',

@@ -7,7 +7,7 @@
 <link rel="manifest" href="manifest.webmanifest" />
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
-<meta name="theme-color" content="#7fd0ff" />
+<meta name="theme-color" content="#ffd166" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -23,29 +23,31 @@
   </div>
   <div class="stats">
     <div class="pill">Score <span id="score">0</span></div>
+    <div class="pill">Best <span id="best">0</span></div>
     <div class="pill">Streak <span id="streak">0</span></div>
+    <div class="pill">Dream <span id="dream">Dawn</span></div>
     <div class="pill">Time <span id="time">75</span></div>
-    <div class="pill">Hit <span id="hitName">ready</span></div>
+    <div class="pill">Found <span id="hitName">ready</span></div>
   </div>
 </div>
 <div id="overlay" class="overlay">
   <div>
     <div class="title">Floating Panda Dream</div>
-    <p class="sub">Float through the neon sky lane, grab glowing treats, thread lantern rings, and pop sleepy hazards with sparkly darts before the dream timer fades.</p>
-    <button id="start" class="start">Start game</button>
+    <p class="sub">Float through a crowded jewel sky, chain lantern rings, collect rare dream charms, and pop drifting hazards before the timer fades.</p>
+    <button id="start" class="start">Start dream run</button>
   </div>
 </div>
 <div class="touch">
   <div class="pad">
-    <button data-k="ArrowUp">U</button>
-    <button data-k="ArrowLeft">L</button>
-    <button data-k="stop">.</button>
-    <button data-k="ArrowRight">R</button>
-    <button data-k="ArrowDown">D</button>
+    <button data-k="ArrowUp">&#8593;</button>
+    <button data-k="ArrowLeft">&#8592;</button>
+    <button data-k="stop">&#8226;</button>
+    <button data-k="ArrowRight">&#8594;</button>
+    <button data-k="ArrowDown">&#8595;</button>
   </div>
   <div class="actions">
-    <button class="fire" data-k="f">FIRE</button>
-    <button class="dash" data-k="Space">DASH</button>
+    <button class="fire" data-k="f">Fire</button>
+    <button class="dash" data-k="Space">Dash</button>
   </div>
 </div>
 <script src="game.js"></script>

@@ -1,6 +1,6 @@
 # 🐼✨ Floating Panda Dream
 
-A dreamy little arcade game where you guide a floating panda through a neon sky lane, grab glowing goodies, thread lantern rings, and dodge sleepy hazards before the dream timer runs out.
+A bright arcade sky-run where you guide a floating panda through a crowded dream lane, collect glowing charms, chain lantern rings, pop hazards with sparkly darts, and chase a higher dream score before the timer runs out.
 
 🎮 **Play now:** https://dacameragirl.github.io/floating-panda-dream/
 
@@ -8,7 +8,7 @@ A dreamy little arcade game where you guide a floating panda through a neon sky 
 
 ### 🌐 GitHub Pages Browser Game
 
-The live Pages version is a static browser game powered by `index.html`, `styles.css`, and `game.js`:
+The live Pages version is the feature-forward game. It is a static browser game powered by `index.html`, `styles.css`, and `game.js`:
 
 - 🐼 Floating panda character
 - 🖱️ Mouse steering: hold/click the playfield and guide the panda
@@ -16,22 +16,33 @@ The live Pages version is a static browser game powered by `index.html`, `styles
 - ⌨️ Keyboard controls
 - ⚡ Dash move
 - ✨ Sparkly dart shooter
-- 🔊 Browser-made panda sound effects
-- 🌠 Neon panda trails and dart trails
+- 🔊 Browser-made sound effects
+- 🌠 Brighter panda trails, dart trails, burst effects, and layered sky scenery
+- 🏆 Local best score tracking
+- 🌅 Dream rank HUD that climbs as your score grows
 - 🍬 Moon candy
 - ⭐ Star fruit
+- 🌙 Moon pearls
+- 💎 Prism gems
+- 🪷 Lotus blooms
+- 🪁 Dream kites
+- ☄️ Comet crumbs
 - 🫧 Dream bubbles
 - ⏰ Time charms
 - 🪽 Dash feathers
+- 🧲 Star magnets that pull good objects closer
+- 🔔 Lullaby bells that clear nearby hazards
 - 🏮 Lantern rings
 - 🌩️ Storm bolts
 - 💤 Sleepy pillows
 - 👻 Ghost clouds
-- 🌈 Neon sky, glow bursts, and colorful collision effects
+- 🌀 Thorn spirals
+- 🌑 Eclipse shards
+- 🪢 Gravity knots
 
-### 🐍 Panda3D Python MVP
+### 🐍 Panda3D Python Reference
 
-The repo also keeps the original local Panda3D version in `src/`. That version runs as a desktop Python game.
+The repo also keeps the original local Panda3D version in `src/`. That version runs as a desktop Python game, but it is simpler and does not match every browser feature.
 
 ## 🕹️ Controls
 
@@ -57,8 +68,8 @@ The repo also keeps the original local Panda3D version in `src/`. That version r
 | --- | --- | --- |
 | 🌐 **HTML** | `index.html` | Browser game structure for GitHub Pages |
 | 🎨 **CSS** | `styles.css` | Neon styling, HUD, overlays, touch controls |
-| 🟨 **JavaScript** | `game.js` | Canvas game loop, physics, collisions, input, scoring, sounds |
-| 🐍 **Python** | `src/` | Original Panda3D desktop game MVP |
+| 🟨 **JavaScript** | `game.js` | Canvas game loop, physics, collisions, input, scoring, sounds, object variety |
+| 🐍 **Python** | `src/` | Simpler Panda3D desktop reference |
 | 📦 **Requirements text** | `requirements.txt` | Python dependency list for the Panda3D version |
 
 The browser game is split into HTML, CSS, and JavaScript files so GitHub can detect each language more clearly.
@@ -95,7 +106,10 @@ Score as high as possible before time runs out:
 - 🫧 Use dream bubbles for protection
 - ⏰ Grab time charms to extend the run
 - ⚡ Use dash feathers and Space/double-click dashes to escape danger
-- 🌩️ Avoid hazards that drain energy or break streaks
+- 🧲 Grab star magnets to pull nearby goodies inward
+- 🔔 Trigger lullaby bells to clear nearby hazards
+- ✨ Shoot sparkly darts to pop hazards from a distance
+- 🌩️ Avoid hazards that drain energy, slow movement, or break streaks
 
 ## 📁 Project Structure
 
@@ -104,6 +118,9 @@ Score as high as possible before time runs out:
 ├── index.html          # GitHub Pages browser shell
 ├── styles.css          # Neon game styling
 ├── game.js             # Browser game logic, sounds, and controls
+├── manifest.webmanifest
+├── sw.js               # Offline cache for the browser game
+├── docs/               # Design notes
 ├── src/                # Panda3D Python game
 ├── requirements.txt    # Python dependencies
 ├── README.md
@@ -112,4 +129,8 @@ Score as high as possible before time runs out:
 
 ## 💭 Notes
 
-The browser game is the best version for GitHub Pages because it runs completely in the browser with no server. The Python/Panda3D version is still useful as a local desktop MVP and reference implementation.
+The browser game is the best version for GitHub Pages because it runs completely in the browser with no server. The Python/Panda3D version is still useful as a local desktop reference, but the browser version is the richer version of the game.
+
+## 📝 Updates
+
+Player-facing change notes live in [`docs/UPDATES.md`](docs/UPDATES.md).
