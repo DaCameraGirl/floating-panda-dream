@@ -1,7 +1,7 @@
 # 🐼✨ Floating Panda Dream
 
 <p align="center">
-  <img src="docs/assets/floating-panda-balloon.svg" alt="Floating panda holding a helium balloon in a dream sky" width="520">
+  <img src="docs/assets/floating-panda-balloon.svg" alt="Chubby floating panda holding two sparkly red balloons in a dream sky" width="520">
 </p>
 
 A bright arcade sky-run where you guide a floating panda through a crowded dream lane, collect glowing charms, chain lantern rings, pop hazards with sparkly darts, and chase a higher dream score before the timer runs out.

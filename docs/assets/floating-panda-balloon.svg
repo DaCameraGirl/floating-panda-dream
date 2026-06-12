@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
-  <title id="title">Floating panda with a helium balloon</title>
-  <desc id="desc">A smiling panda floats through a bright dream sky while holding a heart-shaped helium balloon.</desc>
+  <title id="title">Floating chubby panda with two red balloons</title>
+  <desc id="desc">A smiling, round panda floats through a bright dream sky while holding two sparkly red helium balloons.</desc>
   <defs>
     <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#14256d"/>
@@ -11,6 +11,11 @@
       <stop offset="0" stop-color="#fff7a9" stop-opacity="0.95"/>
       <stop offset="0.34" stop-color="#8bf4ff" stop-opacity="0.32"/>
       <stop offset="1" stop-color="#8bf4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="balloonRed" cx="38%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#ff8a8a"/>
+      <stop offset="0.45" stop-color="#ff3b46"/>
+      <stop offset="1" stop-color="#c20f24"/>
     </radialGradient>
     <filter id="softGlow" x="-25%" y="-25%" width="150%" height="150%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
@@ -46,35 +51,69 @@
   <g filter="url(#softGlow)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 0 -12; 0 0" dur="4.8s" repeatCount="indefinite"/>
 
-    <path d="M443 72 C410 34 342 49 337 105 C331 171 409 188 443 229 C477 188 555 171 549 105 C544 49 476 34 443 72Z" fill="#ff6fb7"/>
-    <path d="M424 71 C401 46 362 61 358 102" fill="none" stroke="#ffd3ea" stroke-width="9" stroke-linecap="round" opacity="0.78"/>
-    <path d="M443 229 C430 249 406 275 370 296" fill="none" stroke="#fff7d6" stroke-width="4" stroke-linecap="round"/>
+    <!-- balloon strings -->
+    <path d="M152 110 C156 138 172 128 185 120" fill="none" stroke="#fff7d6" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <path d="M368 104 C366 134 356 130 350 120" fill="none" stroke="#fff7d6" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
 
+    <!-- red balloon A -->
+    <ellipse cx="152" cy="66" rx="38" ry="44" fill="url(#balloonRed)"/>
+    <path d="M145 108 L152 122 L159 108Z" fill="#c20f24"/>
+    <ellipse cx="139" cy="50" rx="10" ry="15" fill="#ffd9d9" opacity="0.7"/>
+    <path transform="translate(170 52) scale(0.95)" d="M0 -7 C1.4 -1.4 1.4 -1.4 7 0 C1.4 1.4 1.4 1.4 0 7 C-1.4 1.4 -1.4 1.4 -7 0 C-1.4 -1.4 -1.4 -1.4 0 -7Z" fill="#ffffff" opacity="0.95"/>
+    <path transform="translate(140 82) scale(0.6)" d="M0 -7 C1.4 -1.4 1.4 -1.4 7 0 C1.4 1.4 1.4 1.4 0 7 C-1.4 1.4 -1.4 1.4 -7 0 C-1.4 -1.4 -1.4 -1.4 0 -7Z" fill="#ffffff" opacity="0.9"/>
+
+    <!-- red balloon B -->
+    <ellipse cx="368" cy="60" rx="38" ry="44" fill="url(#balloonRed)"/>
+    <path d="M361 102 L368 116 L375 102Z" fill="#c20f24"/>
+    <ellipse cx="355" cy="44" rx="10" ry="15" fill="#ffd9d9" opacity="0.7"/>
+    <path transform="translate(386 46) scale(0.95)" d="M0 -7 C1.4 -1.4 1.4 -1.4 7 0 C1.4 1.4 1.4 1.4 0 7 C-1.4 1.4 -1.4 1.4 -7 0 C-1.4 -1.4 -1.4 -1.4 0 -7Z" fill="#ffffff" opacity="0.95"/>
+    <path transform="translate(356 76) scale(0.6)" d="M0 -7 C1.4 -1.4 1.4 -1.4 7 0 C1.4 1.4 1.4 1.4 0 7 C-1.4 1.4 -1.4 1.4 -7 0 C-1.4 -1.4 -1.4 -1.4 0 -7Z" fill="#ffffff" opacity="0.9"/>
+
+    <!-- chubby floating panda -->
     <g transform="translate(267 219)">
-      <ellipse cx="-38" cy="36" rx="62" ry="16" fill="#101326" opacity="0.24"/>
-      <path d="M-76 -10 C-112 -29 -122 -69 -94 -90 C-61 -115 -31 -70 -41 -34Z" fill="#202026"/>
-      <path d="M76 -10 C112 -29 122 -69 94 -90 C61 -115 31 -70 41 -34Z" fill="#202026"/>
-      <circle cx="-57" cy="-72" r="30" fill="#202026"/>
-      <circle cx="57" cy="-72" r="30" fill="#202026"/>
-      <ellipse cx="0" cy="-21" rx="91" ry="82" fill="#f8f8ef"/>
-      <ellipse cx="-31" cy="-31" rx="23" ry="31" transform="rotate(-20 -31 -31)" fill="#202026"/>
-      <ellipse cx="31" cy="-31" rx="23" ry="31" transform="rotate(20 31 -31)" fill="#202026"/>
-      <circle cx="-31" cy="-36" r="7" fill="#ffffff"/>
-      <circle cx="31" cy="-36" r="7" fill="#ffffff"/>
-      <circle cx="-28" cy="-35" r="3.5" fill="#222"/>
-      <circle cx="34" cy="-35" r="3.5" fill="#222"/>
-      <ellipse cx="0" cy="-4" rx="15" ry="11" fill="#202026"/>
-      <path d="M-20 19 C-8 35 8 35 20 19" fill="none" stroke="#202026" stroke-width="7" stroke-linecap="round"/>
-      <circle cx="-52" cy="1" r="10" fill="#ff9fc8" opacity="0.65"/>
-      <circle cx="52" cy="1" r="10" fill="#ff9fc8" opacity="0.65"/>
-      <path d="M63 -4 C92 -20 110 -35 128 -54" fill="none" stroke="#202026" stroke-width="13" stroke-linecap="round"/>
-      <circle cx="132" cy="-59" r="12" fill="#202026"/>
-      <path d="M-5 -103 L12 -119 L24 -101" fill="none" stroke="#ffd166" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="0" cy="138" rx="94" ry="19" fill="#101326" opacity="0.24"/>
+
+      <!-- raised arms holding the strings -->
+      <path d="M-55 -6 C-86 -34 -92 -70 -82 -99" fill="none" stroke="#202026" stroke-width="22" stroke-linecap="round"/>
+      <path d="M55 -6 C86 -34 92 -70 83 -99" fill="none" stroke="#202026" stroke-width="22" stroke-linecap="round"/>
+
+      <!-- fat body -->
+      <ellipse cx="0" cy="40" rx="90" ry="78" fill="#f8f8ef"/>
+      <ellipse cx="0" cy="50" rx="58" ry="60" fill="#ffffff" opacity="0.55"/>
+
+      <!-- feet -->
+      <ellipse cx="-42" cy="112" rx="30" ry="22" fill="#202026"/>
+      <ellipse cx="42" cy="112" rx="30" ry="22" fill="#202026"/>
+      <circle cx="-42" cy="112" r="9" fill="#ff9fc8" opacity="0.6"/>
+      <circle cx="42" cy="112" r="9" fill="#ff9fc8" opacity="0.6"/>
+
+      <!-- paws gripping the strings -->
+      <circle cx="-82" cy="-101" r="14" fill="#202026"/>
+      <circle cx="83" cy="-101" r="14" fill="#202026"/>
+
+      <!-- ears -->
+      <circle cx="-54" cy="-112" r="29" fill="#202026"/>
+      <circle cx="54" cy="-112" r="29" fill="#202026"/>
+      <circle cx="-54" cy="-110" r="13" fill="#ff9fc8" opacity="0.55"/>
+      <circle cx="54" cy="-110" r="13" fill="#ff9fc8" opacity="0.55"/>
+
+      <!-- head -->
+      <ellipse cx="0" cy="-66" rx="82" ry="70" fill="#f8f8ef"/>
+      <ellipse cx="-31" cy="-76" rx="22" ry="29" transform="rotate(-20 -31 -76)" fill="#202026"/>
+      <ellipse cx="31" cy="-76" rx="22" ry="29" transform="rotate(20 31 -76)" fill="#202026"/>
+      <circle cx="-31" cy="-81" r="7" fill="#ffffff"/>
+      <circle cx="31" cy="-81" r="7" fill="#ffffff"/>
+      <circle cx="-28" cy="-80" r="3.5" fill="#222"/>
+      <circle cx="34" cy="-80" r="3.5" fill="#222"/>
+      <ellipse cx="0" cy="-49" rx="15" ry="11" fill="#202026"/>
+      <path d="M-20 -26 C-8 -10 8 -10 20 -26" fill="none" stroke="#202026" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="-54" cy="-44" r="10" fill="#ff9fc8" opacity="0.65"/>
+      <circle cx="54" cy="-44" r="10" fill="#ff9fc8" opacity="0.65"/>
     </g>
 
     <circle cx="505" cy="263" r="9" fill="#fff36b"/>
     <circle cx="526" cy="245" r="5" fill="#8bf4ff"/>
-    <circle cx="156" cy="116" r="6" fill="#58ffc5"/>
+    <circle cx="156" cy="150" r="6" fill="#58ffc5"/>
     <path d="M150 231 L167 221 L184 231 L167 241Z" fill="#fff36b"/>
   </g>
 </svg>
