@@ -1,3 +1,38 @@
+<p align="center">
+  <img src="docs/readme-banner.svg" alt="Floating Panda Dream — Dreamy browser experience — floating panda vibes, soft visuals, and playful interaction." width="720" />
+</p>
+
+<p align="center">
+  <strong>Dreamy browser experience — floating panda vibes, soft visuals, and playful interaction.</strong>
+</p>
+
+<p align="center">
+  <a href="https://dacameragirl.github.io/floating-panda-dream/"><img src="https://img.shields.io/badge/Live-GitHub%20Pages-33d69f?style=for-the-badge&logo=github&logoColor=white" alt="Live demo" /></a>
+  <a href="https://github.com/DaCameraGirl/floating-panda-dream"><img src="https://img.shields.io/badge/Code-GitHub-58a6ff?style=for-the-badge&logo=github&logoColor=white" alt="Source code" /></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/deploy-GitHub Pages-000000?style=flat-square&logo=github&logoColor=white" alt="deploy-GitHub Pages" />
+  <img src="https://img.shields.io/badge/vibe-dreamy-ff5fa2?style=flat-square" alt="vibe-dreamy" />
+</p>
+
+### Languages
+
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-74%25-F7DF1E?style=flat-square&logo=javascript&logoColor=111" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Python-22%25-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+</p>
+
+### Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Browser-art-ff5fa2?style=flat-square" alt="Browser-art" />
+  <img src="https://img.shields.io/badge/GitHub Pages-live-33d69f?style=flat-square&logo=github&logoColor=white" alt="GitHub Pages-live" />
+</p>
+
+<p align="center">
+  Built by <strong>Angela Hudson</strong> · <a href="https://github.com/DaCameraGirl">DaCameraGirl</a>
+</p>
 # 🐼✨ Floating Panda Dream
 
 <p align="center">
@@ -8,7 +43,9 @@ A bright arcade sky-run where you guide a floating panda through a crowded dream
 
 🎮 **Play now:** https://dacameragirl.github.io/floating-panda-dream/
 
-## 🌈 What You Can Play
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%8C%88%20What%20You%20Can%20Play&fontSize=22&fontColor=e6edf3" width="720" alt="🌈 What You Can Play" /></p>
+
 
 ### 🌐 GitHub Pages Browser Game
 
@@ -48,7 +85,9 @@ The live Pages version is the feature-forward game. It is a static browser game 
 
 The repo also keeps the original local Panda3D version in `src/`. That version runs as a desktop Python game, but it is simpler and does not match every browser feature.
 
-## 🕹️ Controls
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%95%B9%EF%B8%8F%20Controls&fontSize=22&fontColor=e6edf3" width="720" alt="🕹️ Controls" /></p>
+
 
 ### Browser / GitHub Pages
 
@@ -66,7 +105,9 @@ The repo also keeps the original local Panda3D version in `src/`. That version r
 - 🔁 `R`: restart
 - 🚪 `Esc`: quit
 
-## 🧪 Languages Used
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%A7%AA%20Languages%20Used&fontSize=22&fontColor=e6edf3" width="720" alt="🧪 Languages Used" /></p>
+
 
 | Language | Where | What It Does |
 | --- | --- | --- |
@@ -78,7 +119,9 @@ The repo also keeps the original local Panda3D version in `src/`. That version r
 
 The browser game is split into HTML, CSS, and JavaScript files so GitHub can detect each language more clearly.
 
-## 🚀 Run Locally
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%9A%80%20Run%20Locally&fontSize=22&fontColor=e6edf3" width="720" alt="🚀 Run Locally" /></p>
+
 
 ### 🌐 Browser Version
 
@@ -101,7 +144,9 @@ pip install -r requirements.txt
 python src/main.py
 ```
 
-## 🏆 Goal
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%8F%86%20Goal&fontSize=22&fontColor=e6edf3" width="720" alt="🏆 Goal" /></p>
+
 
 Score as high as possible before time runs out:
 
@@ -115,7 +160,9 @@ Score as high as possible before time runs out:
 - ✨ Shoot sparkly darts to pop hazards from a distance
 - 🌩️ Avoid hazards that drain energy, slow movement, or break streaks
 
-## 📁 Project Structure
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%93%81%20Project%20Structure&fontSize=22&fontColor=e6edf3" width="720" alt="📁 Project Structure" /></p>
+
 
 ```text
 .
@@ -131,10 +178,14 @@ Score as high as possible before time runs out:
 └── LICENSE
 ```
 
-## 💭 Notes
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%92%AD%20Notes&fontSize=22&fontColor=e6edf3" width="720" alt="💭 Notes" /></p>
+
 
 The browser game is the best version for GitHub Pages because it runs completely in the browser with no server. The Python/Panda3D version is still useful as a local desktop reference, but the browser version is the richer version of the game.
 
-## 📝 Updates
+<p align="center"><img src="docs/readme-divider.svg" width="720" alt="" /></p>
+<p align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=070b14&height=50&section=header&text=%F0%9F%93%9D%20Updates&fontSize=22&fontColor=e6edf3" width="720" alt="📝 Updates" /></p>
+
 
 Player-facing change notes live in [`docs/UPDATES.md`](docs/UPDATES.md).
